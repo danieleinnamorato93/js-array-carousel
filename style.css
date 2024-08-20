@@ -9,8 +9,8 @@
     margin: 0 auto;
 }
 #carousel {
-width: 700px;
-height: 650px;
+width: 600px;
+height: 500px;
 margin: 30px auto;
 position: relative;
 }
@@ -27,7 +27,7 @@ border-radius: 20px;
     display: block;
 }
 #carousel .bi {
-    font-size: 3rem;
+    font-size: 2rem;
     position: absolute;
     left: 50%;
     transform: translateY(-50%);
@@ -36,9 +36,9 @@ border-radius: 20px;
 
 }
 #prev {
-    left: -10%;
+    top: 5%;
     
 }
 #next{
-    right:-10% ;
+   bottom: -3%;
 }

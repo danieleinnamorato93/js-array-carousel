@@ -1,7 +1,7 @@
 //Preparazione: Richiamo elementi del Dom
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
-const carouselGallery = document.querySelectorAll ('.gallery');
+const carouselGallery = document.querySelector('.gallery');
 
 //Richiamo sorgenti immagine
 const sources = ['img/01.webp', 'img/02.webp' , 'img/03.webp' , 
@@ -9,8 +9,14 @@ const sources = ['img/01.webp', 'img/02.webp' , 'img/03.webp' ,
 
 
 // Genero le immagini col ciclo for
-for(let i = 0; i < sources.length; i++){
-    const image = document.createElement('img');
-    image.src = sources[i];
-    carouselGallery.appendChild(image);
+let imgs = '';
+for(let i = 0; i < sources.length; i++) {
+   imgs += `<img alt="videogame-${i+1}" src="${sources[i]}">`;
 }
+//inserisco le immagini nel DOM
+carouselGallery.innerHTML = imgs;
+const images = document.querySelectorAll('#carousel img')
+
+//Mostro la prima immagine
+let currentActiveIndex = 0;
+images[currentActiveIndex].classList.add('active');
