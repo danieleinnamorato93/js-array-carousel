@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: black;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -60,6 +64,7 @@ object-fit: cover;
 
 .thumbnails img:hover {
     transform: scale(1.1);
+    object-fit: cover; 
 }
 
 .thumbnails img.active {
