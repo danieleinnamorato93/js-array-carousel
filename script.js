@@ -1,4 +1,4 @@
-//Preparazione: Richiamo elementi del Dom
+//Richiamo elementi del Dom
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 const carouselGallery = document.querySelector('.gallery');
@@ -20,3 +20,13 @@ const images = document.querySelectorAll('#carousel img')
 //Mostro la prima immagine
 let currentActiveIndex = 0;
 images[currentActiveIndex].classList.add('active');
+
+//Aggiungo gli eventi per i pusanti
+nextButton.addEventListener('click',  function() {
+images[currentActiveIndex].classList.remove('active');
+currentActiveIndex++;
+if (currentActiveIndex >= images.length) {
+    currentActiveIndex = 0;
+}
+images[currentActiveIndex].classList.add('active');
+});
